@@ -1,35 +1,25 @@
-//ENTRADAS DEL PROBLEMA (comentario de linea)
+//controlador de etiquetas
 
+//1. crear una variable para guardar una etiqueta
 
-// Entradas del problema==variables==constantes
-
-let nombreProducto="bayern"
-let precioProducto=600000
-let pesoProducto=1.5
-let tieneDescuento=true
-let descripcionProducto="Camisa Baryern"
-let telefonoVendedor="3008575897"
-
-
-const NOMBRE_CLIENTE="Mateo"
-
-
-//Arreglos unidimensionales sirve para almacenar varios elementos en una sola variable
-
-
-let productos=["guayos","camiseta","gorra","balon","pantaloneta"]
-let productos2=Array("guayos","camiseta","gorra","balon","pantaloneta")
+let etiquetaTitulo = document.getElementById("titulo");
+let etiquetaMenu = document.getElementById("menu");
 
 
 
+//como modificar el texto de una etiqueta
+
+etiquetaTitulo.textContent = "rojo vos no existis"
+etiquetaMenu.textContent = "Bayern de Múnich"
 
 
+//controlando una img
 
-//SALIDAS
+let etiquetaFoto = document.getElementById("fotobayern");
+etiquetaFoto.src="img/bayern.png"
 
-console.log("hola")
-console.log(nombreProducto)
-console.log("Su nombre es: "+NOMBRE_CLIENTE+ " Y su producto es "+nombreProducto)
-console.log(`Su nombre es: ${NOMBRE_CLIENTE} Y su producto es ${nombreProducto}`)
-console.log(productos)
-console.log(productos2[0])
+
+//cambiar el estilo de la etiqueta
+
+etiquetaTitulo.classList.add("text-center")
+etiquetaTitulo.classList.add("text-danger")
