@@ -92,7 +92,7 @@ let productos=[
 
 
 
-console.log(productos)
+//console.log(productos)
 
 
 
@@ -111,10 +111,10 @@ let fila = document.getElementById("fila");
 productos.forEach(function(producto){
 
 
-    console.log(producto.foto)
-    console.log(producto.nombre)
-    console.log(producto.precio)
-    console.log(producto.boton)
+    //console.log(producto.foto)
+    //console.log(producto.nombre)
+    //console.log(producto.precio)
+    //console.log(producto.boton)
     
 
     //pintando etiquetas
@@ -181,4 +181,25 @@ productos.forEach(function(producto){
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 
+})
+
+
+//Rutina para ampliar informacion del producto
+
+let filaContenedora = document.getElementById("fila")
+
+filaContenedora.addEventListener("click",function(evento){
+  if(evento.target.classList.contains("btn")){
+
+    console.log(evento.target.parentElement.querySelector("h4").textContent)
+    console.log(evento.target.parentElement.querySelector("img").src)
+
+    let fotoinfo = document.getElementById("fotoInfo")
+    fotoinfo
+
+    let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+
+    modalinfo.show()
+
+  }
 })
