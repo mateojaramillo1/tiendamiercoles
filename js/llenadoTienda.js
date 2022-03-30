@@ -1,5 +1,8 @@
 //Creando un arrego de objetos
 
+export function llenarTienda(){
+
+    
 let productos=[
 
     {
@@ -183,23 +186,6 @@ productos.forEach(function(producto){
 
 })
 
+}
 
-//Rutina para ampliar informacion del producto
 
-let filaContenedora = document.getElementById("fila")
-
-filaContenedora.addEventListener("click",function(evento){
-  if(evento.target.classList.contains("btn")){
-
-    console.log(evento.target.parentElement.querySelector("h4").textContent)
-    console.log(evento.target.parentElement.querySelector("img").src)
-
-    let fotoinfo = document.getElementById("fotoInfo")
-    fotoinfo
-
-    let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
-
-    modalinfo.show()
-
-  }
-})
