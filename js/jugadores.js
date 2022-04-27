@@ -113,7 +113,7 @@ let equipaciones = document.getElementById("equipaciones")
 uniformes.forEach(function(uniforme){
 
 
-    console.log(uniformes)
+  
 
     let columna=document.createElement("div")
     columna.classList.add("col")

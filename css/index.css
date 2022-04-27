@@ -1,26 +1,30 @@
-body{
-    background-color: rgb(255, 255, 255);
+body {
+    background-color: #e5e5e5;
 }
 
-.header{
-    position:sticky;
+.header {
+    position: sticky;
     z-index: 1000;
     top: 0;
 }
 
-.navbar{
+.offcanvas.show {
+    background-color: ghostwhite;
+}
+
+.navbar {
     background-image: url(https://i.pinimg.com/236x/84/6a/96/846a964b7b3c1d04e2ee8ce039a372cf.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    box-shadow: 0px 4px 3px rgba(0,0,0,.5);
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
 }
 
-
-.navbar-light .navbar-toggler-icon{
+.navbar-light .navbar-toggler-icon {
     background-color: white;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
     color: white;
 }
 
@@ -41,7 +45,8 @@ body{
     color: rgb(255, 0, 0);
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
     color: white;
 }
 
@@ -52,7 +57,6 @@ body{
 .navbar-light .navbar-nav .nav-link:hover {
     color: white;
 }
-
 
 .navbar-light .navbar-nav .nav-link:visited {
     color: rgb(255, 255, 255);
@@ -66,39 +70,48 @@ body{
     color: white;
 }
 
-.row{
+.row {
     margin-top: 10px;
 }
 
-.text-center{
+.text-center {
     margin-top: auto;
 }
 
-h5{
+h5 {
     color: rgb(28, 135, 14);
 }
 
 .card {
-    box-shadow: 0px 4px 3px rgba(0,0,0,.5);
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
     padding: 10%;
+    background-color: #f7f7f6;
 }
 
 .boton {
     margin-bottom: 15px;
     color: black;
-    box-shadow: 0px 4px 3px rgba(0,0,0,.5);
-    
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
 }
 
-img{
+img {
     width: 2%;
 }
 
+b,
+strong {
+    margin-left: 28px;
+}
 
+p {
+    margin-left: 11px;
+}
 
+.division {
+    display: -webkit-box;
+}
 
-
-.hero{
+.hero {
     background-image: url("../img/tienda.jpg");
     width: 100%;
     height: 650px;
@@ -110,20 +123,13 @@ img{
     overflow: hidden;
 }
 
-.svg-hero{
+.svg-hero {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
 }
 
-
-.icono{
+.icono {
     font-size: 30px;
-
-
 }
-
-
-
-    
