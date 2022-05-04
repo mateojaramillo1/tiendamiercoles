@@ -1,58 +1,69 @@
-let jugadores=[
+let jugadores = [
 
     {
         foto: '../img/neuer.webp',
-        nombre: "Manuel Neuer"
+        nombre: "Manuel Neuer",
+        edad: "Edad: 36 Años"
     },
 
     {
         foto: '../img/pavard.webp',
-        nombre: "Benjamin Pavard"
+        nombre: "Benjamin Pavard",
+        edad: "Edad: 26 Años"
     },
 
     {
         foto: '../img/sule.webp',
-        nombre: "Niklas Süle"
+        nombre: "Niklas Süle",
+        edad: "Edad: 26 Años"
     },
 
     {
         foto: '../img/lucas.webp',
-        nombre: "Lucas Hernández"
+        nombre: "Lucas Hernández",
+        edad: "Edad: 26 Años"
     },
 
     {
         foto: '../img/joshua.webp',
-        nombre: "Joshua Kimmich"
+        nombre: "Joshua Kimmich",
+        edad: "Edad: 27 Años"
     },
 
     {
         foto: '../img/sane.webp',
-        nombre: "Leroy Sané "
+        nombre: "Leroy Sané ",
+        edad: "Edad: 26 Años"
     },
 
     {
         foto: '../img/coman.webp',
-        nombre: "Kingsley Coman"
+        nombre: "Kingsley Coman",
+        edad: "Edad: 25 Años"
     },
 
     {
         foto: '../img/serge.webp',
-        nombre: "Serge Gnabry"
+        nombre: "Serge Gnabry",
+        edad: "Edad: 26 Años"
     },
 
     {
         foto: '../img/leon.webp',
-        nombre: "Leon Goretzka"
+        nombre: "Leon Goretzka",
+        edad: "Edad: 27 Años"
     },
 
     {
         foto: '../img/thomas.webp',
-        nombre: "Thomas Müller"
+        nombre: "Thomas Müller",
+        edad: "Edad: 32 Años"
     },
 
     {
         foto: '../img/robert.webp',
-        nombre: "Robert Lewandowsk"
+        nombre: "Robert Lewandowsk",
+        edad: "Edad: 33 Años"
     },
 
 
@@ -61,25 +72,30 @@ let jugadores=[
 
 let equipo = document.getElementById("equipo")
 
-jugadores.forEach(function(jugador){
+jugadores.forEach(function(jugador) {
 
-    let columna=document.createElement("div")
+    let columna = document.createElement("div")
     columna.classList.add("col")
 
-    let tarjeta=document.createElement("div")
+    let tarjeta = document.createElement("div")
     tarjeta.classList.add("card")
     tarjeta.classList.add("h-100")
 
-    let foto=document.createElement("img")
+    let foto = document.createElement("img")
     foto.classList.add("card-img-top")
-    foto.src=jugador.foto
+    foto.src = jugador.foto
 
     let titulo = document.createElement("h4")
     titulo.classList.add("text-center")
-    titulo.textContent=jugador.nombre
+    titulo.textContent = jugador.nombre
+
+    let edad = document.createElement("h6")
+    edad.classList.add("text-center")
+    edad.textContent = jugador.edad
 
     tarjeta.appendChild(foto)
     tarjeta.appendChild(titulo)
+    tarjeta.appendChild(edad)
     columna.appendChild(tarjeta)
     equipo.appendChild(columna)
 
@@ -87,21 +103,21 @@ jugadores.forEach(function(jugador){
 })
 
 
-let uniformes=[
+let uniformes = [
 
     {
         foto: '../img/titular.jpg',
-        titulo:"Equipacion titular"
+        titulo: "Equipacion titular"
     },
 
     {
         foto: '../img/visitante.jpg',
-        titulo:"Equipacion visitante"
+        titulo: "Equipacion visitante"
     },
 
     {
         foto: '../img/portero.jpg',
-        titulo:"Equipacion portero"
+        titulo: "Equipacion portero"
     },
 
 
@@ -110,25 +126,25 @@ let uniformes=[
 
 let equipaciones = document.getElementById("equipaciones")
 
-uniformes.forEach(function(uniforme){
+uniformes.forEach(function(uniforme) {
 
 
-  
 
-    let columna=document.createElement("div")
+
+    let columna = document.createElement("div")
     columna.classList.add("col")
 
-    let tarjeta=document.createElement("div")
+    let tarjeta = document.createElement("div")
     tarjeta.classList.add("card")
     tarjeta.classList.add("h-100")
 
-    let foto=document.createElement("img")
+    let foto = document.createElement("img")
     foto.classList.add("card-img-top")
-    foto.src=uniforme.foto
+    foto.src = uniforme.foto
 
     let titulo = document.createElement("h4")
     titulo.classList.add("text-center")
-    titulo.textContent=uniforme.titulo
+    titulo.textContent = uniforme.titulo
 
     tarjeta.appendChild(foto)
     tarjeta.appendChild(titulo)
@@ -137,5 +153,3 @@ uniformes.forEach(function(uniforme){
 
 
 })
-
-

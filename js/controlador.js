@@ -44,9 +44,9 @@ let botonAgregarCarrito = document.getElementById("botonadd")
 
 botonAgregarCarrito.addEventListener("click", function(evento) {
 
- 
 
-    
+
+
 
 
 
@@ -57,7 +57,7 @@ botonAgregarCarrito.addEventListener("click", function(evento) {
 
 
 
-    let cantidad1= document.getElementById("cantidad")
+    let cantidad1 = document.getElementById("cantidad")
 
     cantidad1.reset()
 
@@ -128,11 +128,14 @@ botonVerCarrito.addEventListener("click", function() {
 
 
     let base = document.getElementById("basecarro")
-    let total = document.getElementById("total")
+    let totalPesos = document.getElementById("totalpesos")
+
 
     base.innerHTML = ""
 
     carrito.forEach(function(producto) {
+
+
 
         let fila = document.createElement("div")
         fila.classList.add("row")
@@ -149,7 +152,7 @@ botonVerCarrito.addEventListener("click", function() {
         let columna4 = document.createElement("div")
         columna4.classList.add("col-12", "division")
 
-    
+
 
 
         let foto = document.createElement("img")
@@ -177,18 +180,43 @@ botonVerCarrito.addEventListener("click", function() {
 
 
         let tituloSubtotal = document.createElement("strong")
-        let subtotal = document.createElement("p")
+        let total = document.createElement("p")
         tituloSubtotal.classList = ("text-center")
-        subtotal.classList.add("text-center")
+        total.classList.add("text-center")
         tituloSubtotal.textContent = "Subtotal:"
-        subtotal.textContent = producto.precio * producto.cantidad
-
-       
-        total.textContent="Total:"
-    
+        let resultado = producto.precio * producto.cantidad
+        total.textContent = resultado
 
 
-       
+        producto.subtotal = resultado
+
+
+
+
+        let totalnetoPesos = 0;
+        carrito.forEach(function(producto) {
+            totalnetoPesos = totalnetoPesos + Number(producto.subtotal)
+        })
+
+        totalPesos.textContent = "El total de tus compras es de: " + totalnetoPesos + " pesos"
+
+
+
+        let dolares = document.getElementById("dolares")
+
+        dolares.addEventListener("click", function() {
+
+            let conversion = 1 * totalnetoPesos / 4000
+
+            totalPesos.textContent = "El total de tus compras es de: " + conversion + " dolares"
+
+
+
+        })
+
+
+
+
 
 
 
@@ -200,25 +228,27 @@ botonVerCarrito.addEventListener("click", function() {
         columna3.appendChild(tituloCantidad)
         columna3.appendChild(cantidad)
         columna4.appendChild(tituloSubtotal)
-        columna4.appendChild(subtotal)
+        columna4.appendChild(total)
         columna2.appendChild(columna3)
         columna2.appendChild(columna4)
         columna1.appendChild(foto)
         fila.appendChild(columna1)
         fila.appendChild(columna2)
         base.appendChild(fila)
-        base.appendChild(total)
-       
+
+
+
+
 
     })
 
 
-   
-   
+
+
+
 
 
     modalcompra.show()
 
 
 })
-

@@ -22,7 +22,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <img src="img/Bayern_munich1.png" alt="foto" class="img img-fluid" id="imagen">
-                <a class="navbar-brand" href="index.html">Bayern Múnich</a>
+                <a class="navbar-brand" href="index.html">Bayern Múnich FC</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,19 +35,23 @@
                             <a class="nav-link" href="tienda.html">Tienda</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="vercarrito">
-                                <i class="bi bi-cart3"></i>
 
-                                <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible" id="capsula">
-                      99+
-                    </span>
-
-                            </a>
-                        </li>
                     </ul>
 
                 </div>
+
+                <form class="d-flex">
+
+                    <a class="nav-link" href="#" id="vercarrito">
+                        <i class="bi bi-cart3"></i>
+
+                        <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible" id="capsula">
+                            99+
+                        </span>
+
+                    </a>
+
+                </form>
 
             </div>
         </nav>
@@ -86,10 +90,10 @@
                                     <h5 class="text-center mt-3" id="precioInfo"></h5>
                                     <h6 class="text-center mt-3" id="descripcionInfo"></h6>
                                     <div class="mb-4 ms-2">
-                                    <form id="cantidad">
-                                        <label for="exampleInputPassword1" class="form-label" ><h6>Cantidad</h6></label>
-                                        <input type="number" class="form-control" id="cantidadProducto" value="1" min="1" pattern="^[1-9]+">
-                                    </form>
+                                        <form id="cantidad">
+                                            <label for="exampleInputPassword1" class="form-label"><h6>Cantidad</h6></label>
+                                            <input type="number" class="form-control" id="cantidadProducto" min="1" pattern="^[0-9]+" value="1" formControlName="precio_min" oninput="this.value = Math.max(this.value, 1)">
+                                        </form>
                                     </div>
                                 </div>
 
@@ -119,9 +123,17 @@
                     <div class="modal-body">
                         <div class="container" id="basecarro">
 
-                            <div class="container" id="total"></div>
+
+
+
 
                         </div>
+                    </div>
+                    <div class="container text-center">
+                        <h6 id="totalpesos">
+                        </h6>
+
+                        <button class="btn btn-primary mb-2 mt-3" id="dolares">cambiar a dolares</button>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
